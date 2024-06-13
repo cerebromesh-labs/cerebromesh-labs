@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { sora, sourceCodePro } from "@/styles/fonts";
 import "@/styles/globals.css";
 
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     ]
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: '#AC6AFF', // Theme color for the website
+}
 
 export default function RootLayout({
   children,

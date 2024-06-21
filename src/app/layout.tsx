@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { sora, sourceCodePro } from "@/styles/fonts";
+import { sora, sourceCodePro, inter } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -45,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} ${sourceCodePro.variable}`}>
+      <body className={`${sora.variable} 
+                        ${sourceCodePro.variable}
+                        ${inter.variable}`}>
         {children}
       </body>
     </html>

@@ -36,4 +36,4 @@ export const navigation = [
       url: "#login",
       onlyMobile: true,
     },
-  ];  
+  ];

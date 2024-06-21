@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         Sora: ["var(--font-sora)", "sans-serif"],
         SourceCodePro: ["--font-source-code-pro", "monospace"],
+        Inter: ["--font-inter", "sans-serif"],
       },
     },
   },

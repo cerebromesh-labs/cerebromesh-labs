@@ -88,7 +88,7 @@ const Header = () => {
 
         {/* Sign In Button (Desktop) */}
         {/* <Button className="hidden lg:flex" href="#login"> */}
-        <a href="#signin" className="button lg:leading-5 font-Inter text-[15px] font-semibold hidden max-lg:mr-8 text-white transition-colors hover:text-white/50 md:block border-2 rounded-full border-white px-5 py-2 hover:bg-white hover:text-black">
+        <a href="#signin" className="button lg:leading-5 font-Inter text-[15px] font-semibold hidden max-lg:mr-8 text-white transition-colors md:block border-2 rounded-full border-white px-5 py-2 hover:bg-white hover:text-black">
             Sign in
         </a>
           

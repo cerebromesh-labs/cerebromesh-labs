@@ -13,7 +13,14 @@ const config: Config = {
         SourceCodePro: ["--font-source-code-pro", "monospace"],
         Inter: ["--font-inter", "sans-serif"],
       },
-    },
+      colors:{
+        "main-bg": "#1B1B1B",
+        "secondary-bg": "#222328",
+        'light-blue-bg': '#464D69',
+        'dark-blue-bg': '#1D2336',
+        'primary':'#8CA6FF'
+      }
+    }
   },
   plugins: [],
 };

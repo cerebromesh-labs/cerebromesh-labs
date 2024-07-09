@@ -52,8 +52,8 @@ const Header = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full bg-black/90 z-50 border-b lg:bg-black/90 lg:backdrop-blur-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`}>
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 justify-between">
+    <div className={`fixed top-0 left-0 w-full h-20 flex justify-center items-center bg-main-bg z-50 lg:bg-main-bg lg:backdrop-blur-sm shadow-black/30 shadow-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/100 backdrop-blur-sm'}`}>
+      <div className="flex container mx-auto px-2 py-2 items-center justify-between">
         {/* Logo */}
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           <Image src={textualLogo} alt="CerebroMesh Labs" width={190} height={40} />
@@ -78,7 +78,7 @@ const Header = () => {
           {/* Hamburger Menu Icon */}
           {/* <HamburgerMenu /> */}
         </nav>
-        
+
         <div className='max-md:ml-auto flex items-center'>
 
         {/* New Account Button (Desktop) */}
@@ -91,7 +91,7 @@ const Header = () => {
         <a href="#signin" className="button lg:leading-5 font-Inter text-[15px] font-semibold hidden max-lg:mr-8 text-white transition-colors md:block border-2 rounded-full border-white px-5 py-2 hover:bg-white hover:text-black">
             Sign in
         </a>
-          
+
         {/* </Button> */}
 
         {/* Hamburger Menu Icon (Mobile) */}

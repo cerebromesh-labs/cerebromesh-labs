@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sora.variable} 
                         ${sourceCodePro.variable}
-                        ${inter.variable}`}>
+                        ${inter.variable} min-h-[100vh] h-full bg-main-bg text-white`}>
         {children}
       </body>
     </html>

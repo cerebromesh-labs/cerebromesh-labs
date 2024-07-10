@@ -41,19 +41,19 @@ export const navigation = [
 
 export const getStartedSlides=[
     {
-        title:"Refined<br/><span className={\'text-primary\'}>AI</span><br/>Databases",
+        title:"Refined<br/><span className={'high'}>AI</span><br/>Databases",
         description:"Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. Unlock your AI\'s potential with our expert data.",
         button:"Get Started",
         buttonHref:"#"
     },
     {
-        title:"Refined<br/><span className={\'text-primary\'}>AI</span><br/>Databases",
+        title:"Refined<br/><span className={'text-primary'}>AI</span><br/>Databases",
         description:"Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. Unlock your AI\'s potential with our expert data.",
         button:"Get Started",
         buttonHref:"#"
     },
     {
-        title:"Refined<br/><span className={\'text-primary\'}>AI</span><br/>Databases",
+        title:"Refined<br/><span className={'text-primary'}>AI</span><br/>Databases",
         description:"Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. Unlock your AI\'s potential with our expert data.",
         button:"Get Started",
         buttonHref:"#"

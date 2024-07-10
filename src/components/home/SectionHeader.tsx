@@ -16,7 +16,7 @@ export default function SectionHeader({title,description}:{title:string,descript
                     </h2>
                 </div>
             </div>
-            <p className={'lg:text-xl md:text-lg text-md  lg:text-left text-center '} dangerouslySetInnerHTML={{__html:description}}/>
+            <div className={'lg:text-xl md:text-lg text-md  lg:text-left text-center !leading-relaxed'} dangerouslySetInnerHTML={{__html:description}}/>
         </div>
     )
 }

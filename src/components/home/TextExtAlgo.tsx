@@ -30,7 +30,8 @@ export default function TextExtAlgo(){
                         scales: {
                             x: {
                                 grid: {
-                                    display: false,
+                                    display: true,
+                                    color:"#3E3E40"
                                 },
                                 ticks: {
 
@@ -55,7 +56,8 @@ export default function TextExtAlgo(){
                             },
                             y: {
                                 grid: {
-                                    display: false,
+                                    display: true,
+                                    color:"#3E3E40"
                                 },
                                 ticks: {
 

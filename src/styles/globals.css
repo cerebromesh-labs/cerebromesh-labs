@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ol li {
+    @apply list-decimal lg:pl-1 lg:ml-4
+}
+
+ol {
+    @apply flex flex-col items-center lg:items-start
+}

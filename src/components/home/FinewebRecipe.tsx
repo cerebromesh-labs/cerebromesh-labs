@@ -3,6 +3,8 @@ import React from 'react'
 import SectionHeader from "@/components/home/SectionHeader";
 import Image from "next/image";
 import {FineWebRecipData} from "@/lib/constants";
+import { easeInOut, motion } from 'framer-motion';
+
 
 export default function FinewebRecipe() {
 
@@ -14,7 +16,11 @@ export default function FinewebRecipe() {
 
                 <div className={'flex flex-col lg:px-40 md:px-20'}>
                     {FineWebRecipData.map((item, index) => (
-                        <div className={`grid md:grid-cols-2 grid-cols-1`}>
+                        <motion.div
+                            initial={{opacity:0,translateY:50}}
+                            whileInView={{opacity:1,y:0,translateY:0}}
+                            transition={{ duration: 1, easeInOut, delay: .2 }}
+                            className={`grid md:grid-cols-2 grid-cols-1`} key={index}>
                             <div>
                                 <div
                                     className={'h-full md:w-40 w-full flex flex-col justify-center items-center md:justify-start md:items-start'}>
@@ -31,7 +37,7 @@ export default function FinewebRecipe() {
                             </div>
                             <div
                                 className={`w-[.5px] mb-6 h-10 bg-gray-400 mx-auto md:hidden ${FineWebRecipData.length == index + 1 && "hidden"}`}/>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

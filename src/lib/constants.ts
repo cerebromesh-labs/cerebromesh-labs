@@ -274,3 +274,98 @@ export const FineWebRecipData = [
         icon:DuplicatiorIcon
     }
 ]
+
+export const duplicationAlgoData = [
+    {
+        label: 'Web 1',
+        data: [100, -80, 70, 60, -50, 40],
+        backgroundColor: [
+            '#165BAA',
+            '#165BAA',
+            '#165BAA',
+        ],
+        borderColor: [
+            '#165BAA',
+            '#165BAA',
+            '#165BAA',
+        ],
+        borderWidth: 1,
+    },
+    {
+        label: 'Web 2',
+        data: [-90, 70, 90, 20, -10, 40],
+        backgroundColor: [
+            '#A155B9',
+            '#A155B9',
+            '#A155B9',
+        ],
+        borderColor: [
+            '#A155B9',
+            '#A155B9',
+            '#A155B9',
+        ],
+        borderWidth: 1,
+
+    },
+    {
+        label: 'Web 3',
+        data: [90, 70, 60, 20, 10, 40],
+        backgroundColor: [
+            '#F765A3',
+            '#F765A3',
+            '#F765A3',
+        ],
+        borderColor: [
+            '#F765A3',
+            '#F765A3',
+            '#F765A3',
+        ],
+        borderWidth: 1,
+
+    }
+]
+
+export const leaderboardBubbleData = [
+    {
+        label: 'Miner 1',
+        data: [
+            {x: 1, y: 2, r: 1},
+            {x: 2, y: 3, r: .5},
+            {x: 3, y: 4, r: .8},
+            {x: 4, y: 5, r: 2},
+            {x: 5, y: 6, r: 1.5},
+            {x: 6, y: 7, r: .4},
+            {x: 7, y: 8, r: .9},
+        ],
+        backgroundColor: '#165BAA',
+        borderColor: '#165BAA',
+    },
+    {
+        label: 'Miner 2',
+        data: [
+            {x: 4, y: 2, r: 1},
+            {x: 6, y: 3, r: 2},
+            {x: 8, y: 4, r: 1},
+            {x: 2, y: 5, r: 2},
+            {x: 4, y: 6, r: 1},
+            {x: 7, y: 7, r: 1},
+            {x: 7, y: 8, r: 2},
+        ],
+        backgroundColor: '#A155B9',
+        borderColor: '#A155B9',
+    },
+    {
+        label: 'Miner 3',
+        data: [
+            {x: 8, y: 2, r: 1},
+            {x: 5, y: 3, r: 2},
+            {x: 5, y: 4, r: 1},
+            {x: 7, y: 5, r: 1},
+            {x: 5, y: 6, r: 2},
+            {x: 2, y: 7, r: 1},
+            {x: 3, y: 8, r: 1},
+        ],
+        backgroundColor: '#F765A3',
+        borderColor: '#F765A3',
+    },
+]

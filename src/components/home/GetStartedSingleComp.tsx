@@ -7,6 +7,7 @@ export default function GetStartedSingleComp({title,description,button,buttonHre
     buttonHref?:string
 }){
     return(
+
     <div className={'relative rounded-lg overflow-hidden'}>
         <div className="absolute inset-0 bg-[url('/hero.webp')] bg-cover "></div>
         <div

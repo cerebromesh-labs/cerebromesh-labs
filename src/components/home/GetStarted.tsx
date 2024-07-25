@@ -24,12 +24,14 @@ export default function GetStarted() {
                 animate={{opacity:1}}
                 transition={{duration:1,ease:easeInOut}}
                 className={'container mx-auto'}>
+
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     slidesPerView={1}
                     pagination={{clickable: true,}}
                     autoplay={{delay: 5000}}
                 >
+
                         {getStartedSlides?.map(({title,description,button,buttonHref},_idx)=>(
                             <SwiperSlide key={_idx}>
                             <GetStartedSingleComp
@@ -43,6 +45,7 @@ export default function GetStarted() {
 
                 </Swiper>
             </motion.div>
+
         </div>
     )
 }

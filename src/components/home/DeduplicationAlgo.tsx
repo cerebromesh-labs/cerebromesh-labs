@@ -4,6 +4,8 @@ import React from 'react'
 import SectionHeader from "@/components/home/SectionHeader";
 import {Bar} from 'react-chartjs-2'
 import {registerables,Chart} from 'chart.js';
+import {duplicationAlgoData} from "@/lib/constants";
+import {easeInOut,motion} from "framer-motion";
 Chart.register(...registerables);
 
 export default function DeduplicationAlgo() {
@@ -16,57 +18,17 @@ export default function DeduplicationAlgo() {
                   "<ol><li>Improved Performance: Prevents overfitting, enhancing model generalization.</li>\n" +
                   "<li>Efficiency: Reduces dataset size and computational resources.</li>\n" +
                   "<li>Quality: Maintains diverse, high-quality training data.</li></ol>"}/>
+
+                <motion.div
+                    initial={{opacity:0}}
+                    whileInView={{opacity:1}}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                    className={'mx-auto w-full'}
+                >
                 <Bar data={{
                     labels: ['Jan', 'Feb', 'Mar', "Apr", "May", "Jun"],
-                    datasets: [
-                        {
-                            label: 'Web 1',
-                            data: [100, -80, 70, 60, -50, 40],
-                            backgroundColor: [
-                                '#165BAA',
-                                '#165BAA',
-                                '#165BAA',
-                            ],
-                            borderColor: [
-                                '#165BAA',
-                                '#165BAA',
-                                '#165BAA',
-                            ],
-                            borderWidth: 1,
-                        },
-                        {
-                            label: 'Web 2',
-                            data: [-90, 70, 90, 20, -10, 40],
-                            backgroundColor: [
-                                '#A155B9',
-                                '#A155B9',
-                                '#A155B9',
-                            ],
-                            borderColor: [
-                                '#A155B9',
-                                '#A155B9',
-                                '#A155B9',
-                            ],
-                            borderWidth: 1,
+                    datasets: duplicationAlgoData
 
-                        },
-                        {
-                            label: 'Web 3',
-                            data: [90, 70, 60, 20, 10, 40],
-                            backgroundColor: [
-                                '#F765A3',
-                                '#F765A3',
-                                '#F765A3',
-                            ],
-                            borderColor: [
-                                '#F765A3',
-                                '#F765A3',
-                                '#F765A3',
-                            ],
-                            borderWidth: 1,
-
-                        }
-                    ],
                 }} options={{
                     scales: {
                         y: {
@@ -98,6 +60,8 @@ export default function DeduplicationAlgo() {
                         },
                     }
                 }}/>
+                </motion.div>
+
             </div>
         </div>
     )

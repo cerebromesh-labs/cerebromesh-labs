@@ -5,14 +5,29 @@ import {Line} from 'react-chartjs-2'
 import {registerables,Chart} from 'chart.js';
 Chart.register(...registerables);
 
+
+import {motion,easeInOut} from "framer-motion";
+
 export default function TextExtAlgo(){
     return (
         <div className={'container mx-auto my-14'}>
             <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
                 <SectionHeader title={'Text Extraction Algorithm'} description={'Text extraction from web crawl data can use either raw HTML with metadata or text-only versions of websites. Specialized open-source libraries significantly improve text quality by removing boilerplate content from raw data, producing a smaller but better dataset for model training. While resource-intensive, this method is preferable for high-quality results. However, budget constraints might make using default text-only data a practical, if lower quality, alternative.'}/>
-                <p className={'md:text-lg text-md my-10 text-center w-full'}>
+
+                <motion.div
+                    initial={{opacity:0}}
+                    whileInView={{opacity:1}}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                    className={'md:text-lg text-md my-10 text-center w-full'}>
                     Attempting to further globally dedup worsened perf
-                </p>
+                </motion.div>
+                <motion.div
+                initial={{opacity:0}}
+                whileInView={{opacity:1}}
+                transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                className={'mx-auto w-full'}
+                >
+
                 <Line
                     options={{
                         aspectRatio:1.8,
@@ -149,6 +164,9 @@ export default function TextExtAlgo(){
                         ]
                     }
                 }/>
+
+                </motion.div>
+
             </div>
         </div>
     )

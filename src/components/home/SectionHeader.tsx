@@ -2,11 +2,19 @@ import React from 'react'
 import Image from "next/image";
 import DotImage from "@/assets/cerebromesh_inside_dot.png";
 
+import { easeInOut, motion } from 'framer-motion';
+
 
 export default function SectionHeader({title,description}:{title:string,description:string}){
     return (
         <div className={'lg:space-y-5 space-y-12'}>
-            <div className={'flex flex-row gap-1 items-center justify-center lg:justify-start lg:relative'}>
+
+            <motion.div
+                initial={{opacity:0}}
+                whileInView={{opacity:1}}
+                transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                className={'flex flex-row gap-1 items-center justify-center lg:justify-start lg:relative'}>
+
                 <div className={'lg:block hidden'}>
                     <Image src={DotImage} alt={"Dot Image"} width={25} height={25}/>
                 </div>
@@ -15,8 +23,14 @@ export default function SectionHeader({title,description}:{title:string,descript
                         {title}
                     </h2>
                 </div>
-            </div>
-            <div className={'lg:text-2xl md:text-xl text-md  lg:text-left text-center !leading-relaxed'} dangerouslySetInnerHTML={{__html:description}}/>
+
+            </motion.div>
+            <motion.div
+                initial={{opacity:0}}
+                whileInView={{opacity:1}}
+                transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                className={'lg:text-2xl md:text-xl text-md  lg:text-left text-center !leading-relaxed'}
+                dangerouslySetInnerHTML={{__html:description}}/>
         </div>
     )
 }

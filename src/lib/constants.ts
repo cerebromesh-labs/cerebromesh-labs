@@ -1,3 +1,14 @@
+import CloudIcon from "@/assets/icons/cloud.svg";
+import FilterIcon from "@/assets/icons/filter.svg";
+import DocumentIcon from "@/assets/icons/document.png";
+import CogIcon from "@/assets/icons/cog.png";
+import FaceIcon from "@/assets/icons/face.svg";
+import ABCBlockIcon from "@/assets/icons/acb-block.svg";
+import StandardFiltersIcon from "@/assets/icons/standardFilters.svg";
+import EarthIcon from "@/assets/icons/Earth.png";
+import DuplicatiorIcon from "@/assets/icons/dedupduplicate.svg";
+
+
 export const navigation = [
     {
       id: "0",
@@ -214,5 +225,149 @@ export const leaderboardData = [
 
 
 
+]
+
+
+export const FineWebRecipData = [
+    {
+        title:"URL Collection",
+        desc:"Gather a wide range of URLs from various sources",
+        icon:CloudIcon
+    },
+    {
+        title:"Filtering",
+        desc:"Apply filters to eliminate irrelevant or low-quality URLs.",
+        icon:FilterIcon
+    },
+    {
+        title:"Text Extraction",
+        desc:"Extract textual content from the remaining URLs.",
+        icon:DocumentIcon
+    },
+    {
+        title:"Custom Filters",
+        desc:"Apply specific, customized filters tailored to the dataset's requirements.",
+        icon:CogIcon
+    },
+    {
+        title:"PII Removal",
+        desc:"Identify and remove any personally identifiable information.",
+        icon:FaceIcon
+    },
+    {
+        title:"Language Filtering",
+        desc:"Ensure that the extracted text is in the desired language(s).",
+        icon:ABCBlockIcon
+    },
+    {
+        title:"Standard Filters",
+        desc:"Implement commonly used filters for further refinement.",
+        icon:StandardFiltersIcon
+    },
+    {
+        title:"Content Quality Filtering",
+        desc:"Use advanced algorithms to maintain the quality of the text.",
+        icon:EarthIcon
+    },
+    {
+        title:"Duplication",
+        desc:"Use techniques like MinHash to remove duplicate entries and content.",
+        icon:DuplicatiorIcon
+    }
+]
+
+export const duplicationAlgoData = [
+    {
+        label: 'Web 1',
+        data: [100, -80, 70, 60, -50, 40],
+        backgroundColor: [
+            '#165BAA',
+            '#165BAA',
+            '#165BAA',
+        ],
+        borderColor: [
+            '#165BAA',
+            '#165BAA',
+            '#165BAA',
+        ],
+        borderWidth: 1,
+    },
+    {
+        label: 'Web 2',
+        data: [-90, 70, 90, 20, -10, 40],
+        backgroundColor: [
+            '#A155B9',
+            '#A155B9',
+            '#A155B9',
+        ],
+        borderColor: [
+            '#A155B9',
+            '#A155B9',
+            '#A155B9',
+        ],
+        borderWidth: 1,
+
+    },
+    {
+        label: 'Web 3',
+        data: [90, 70, 60, 20, 10, 40],
+        backgroundColor: [
+            '#F765A3',
+            '#F765A3',
+            '#F765A3',
+        ],
+        borderColor: [
+            '#F765A3',
+            '#F765A3',
+            '#F765A3',
+        ],
+        borderWidth: 1,
+
+    }
+]
+
+export const leaderboardBubbleData = [
+    {
+        label: 'Miner 1',
+        data: [
+            {x: 1, y: 2, r: 1},
+            {x: 2, y: 3, r: .5},
+            {x: 3, y: 4, r: .8},
+            {x: 4, y: 5, r: 2},
+            {x: 5, y: 6, r: 1.5},
+            {x: 6, y: 7, r: .4},
+            {x: 7, y: 8, r: .9},
+        ],
+        backgroundColor: '#165BAA',
+        borderColor: '#165BAA',
+    },
+    {
+        label: 'Miner 2',
+        data: [
+            {x: 4, y: 2, r: 1},
+            {x: 6, y: 3, r: 2},
+            {x: 8, y: 4, r: 1},
+            {x: 2, y: 5, r: 2},
+            {x: 4, y: 6, r: 1},
+            {x: 7, y: 7, r: 1},
+            {x: 7, y: 8, r: 2},
+        ],
+        backgroundColor: '#A155B9',
+        borderColor: '#A155B9',
+    },
+    {
+        label: 'Miner 3',
+        data: [
+            {x: 8, y: 2, r: 1},
+            {x: 5, y: 3, r: 2},
+            {x: 5, y: 4, r: 1},
+            {x: 7, y: 5, r: 1},
+            {x: 5, y: 6, r: 2},
+            {x: 2, y: 7, r: 1},
+            {x: 3, y: 8, r: 1},
+        ],
+        backgroundColor: '#F765A3',
+        borderColor: '#F765A3',
+    },
 ]
 

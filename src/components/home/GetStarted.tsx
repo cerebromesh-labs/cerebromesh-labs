@@ -14,10 +14,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import {motion, easeInOut} from "framer-motion";
+
 export default function GetStarted() {
     return (
         <div className={'mt-20 pt-4 '}>
-            <div className={'container mx-auto'}>
+            <motion.div
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration:1,ease:easeInOut}}
+                className={'container mx-auto'}>
+
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     slidesPerView={1}
@@ -25,8 +32,8 @@ export default function GetStarted() {
                     autoplay={{delay: 5000}}
                 >
 
-                        {getStartedSlides?.map(({title,description,button,buttonHref})=>(
-                            <SwiperSlide>
+                        {getStartedSlides?.map(({title,description,button,buttonHref},_idx)=>(
+                            <SwiperSlide key={_idx}>
                             <GetStartedSingleComp
                                 title={title}
                                 description={description}
@@ -37,7 +44,8 @@ export default function GetStarted() {
                         ))}
 
                 </Swiper>
-            </div>
+            </motion.div>
+
         </div>
     )
 }

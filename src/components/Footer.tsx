@@ -16,7 +16,7 @@ export default function Footer() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 mt-8 md:mt-0  w-full">
                     <div className={'flex flex-col justify-center items-center md:justify-start md:items-start'}>
-                        <h2 className="font-medium tracking-widest text-xl text-gray-400 mb-3">LET'S CONNECT</h2>
+                        <h2 className="font-medium tracking-widest text-xl text-gray-400 mb-3">{"LET'S CONNECT"}</h2>
                         <nav className="flex flex-col gap-3 mb-10 list-none text-center md:text-left">
                             <li>
                                 <a className="text-xl font-medium cursor-pointer">Contact Me</a>

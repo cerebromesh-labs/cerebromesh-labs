@@ -1,3 +1,14 @@
+import CloudIcon from "@/assets/icons/cloud.svg";
+import FilterIcon from "@/assets/icons/filter.svg";
+import DocumentIcon from "@/assets/icons/document.png";
+import CogIcon from "@/assets/icons/cog.png";
+import FaceIcon from "@/assets/icons/face.svg";
+import ABCBlockIcon from "@/assets/icons/acb-block.svg";
+import StandardFiltersIcon from "@/assets/icons/standardFilters.svg";
+import EarthIcon from "@/assets/icons/Earth.png";
+import DuplicatiorIcon from "@/assets/icons/dedupduplicate.svg";
+
+
 export const navigation = [
     {
       id: "0",
@@ -216,3 +227,50 @@ export const leaderboardData = [
 
 ]
 
+export const FineWebRecipData = [
+    {
+        title:"URL Collection",
+        desc:"Gather a wide range of URLs from various sources",
+        icon:CloudIcon
+    },
+    {
+        title:"Filtering",
+        desc:"Apply filters to eliminate irrelevant or low-quality URLs.",
+        icon:FilterIcon
+    },
+    {
+        title:"Text Extraction",
+        desc:"Extract textual content from the remaining URLs.",
+        icon:DocumentIcon
+    },
+    {
+        title:"Custom Filters",
+        desc:"Apply specific, customized filters tailored to the dataset's requirements.",
+        icon:CogIcon
+    },
+    {
+        title:"PII Removal",
+        desc:"Identify and remove any personally identifiable information.",
+        icon:FaceIcon
+    },
+    {
+        title:"Language Filtering",
+        desc:"Ensure that the extracted text is in the desired language(s).",
+        icon:ABCBlockIcon
+    },
+    {
+        title:"Standard Filters",
+        desc:"Implement commonly used filters for further refinement.",
+        icon:StandardFiltersIcon
+    },
+    {
+        title:"Content Quality Filtering",
+        desc:"Use advanced algorithms to maintain the quality of the text.",
+        icon:EarthIcon
+    },
+    {
+        title:"Duplication",
+        desc:"Use techniques like MinHash to remove duplicate entries and content.",
+        icon:DuplicatiorIcon
+    }
+]

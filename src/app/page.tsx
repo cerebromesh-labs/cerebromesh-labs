@@ -9,6 +9,7 @@ import EvaluationMethodology from "@/components/home/EvaluationMethodology";
 import Datasets from "@/components/home/Datasets";
 import Leaderboard from "@/components/home/Leaderboard";
 import Footer from "@/components/Footer";
+import FinewebRecipe from "@/components/home/FinewebRecipe";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <GetStarted/>
       <GoodDataComp/>
+        <FinewebRecipe/>
       <TextExtAlgo/>
       <BaseFilteringAlgorithm/>
         <DeduplicationAlgo/>

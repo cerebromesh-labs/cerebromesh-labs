@@ -3,6 +3,7 @@ import React from 'react'
 import Logo from '@/assets/textualLogo.png'
 import Image from "next/image";
 
+
 export default function Footer() {
     return (
         <footer className="bg-[#272727] text-whitee body-font">

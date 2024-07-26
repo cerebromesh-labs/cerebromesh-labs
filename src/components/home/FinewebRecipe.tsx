@@ -9,7 +9,7 @@ import { easeInOut, motion } from 'framer-motion';
 export default function FinewebRecipe() {
 
     return (
-        <div className={'container mx-auto my-14'}>
+        <div className={'container mx-auto py-8'}>
             <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
                 <SectionHeader title={"The FineWeb Recipe"} description={
                     "The data preparation algorithm involves several key steps to ensure the creation of a high-quality dataset:"}/>

@@ -48,13 +48,13 @@ export default function Leaderboard() {
     }
 
     return (
-        <div className={'container mx-auto'}>
+        <div className={'container mx-auto '}>
             <div className={'py-16 flex flex-col justify-center items-center'}>
                 <motion.h2
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     transition={{ duration: 1.5, easeInOut, delay: .3 }}
-                    className={'text-4xl font-bold'}>Cerebromesh TTS Subnet Leaderboard</motion.h2>
+                    className={'md:text-4xl text-2xl font-bold text-center'}>Cerebromesh TTS Subnet Leaderboard</motion.h2>
                 <motion.div
                     initial={{opacity:0, translateY:50}}
                     whileInView={{opacity:1,translateY:0}}
@@ -65,7 +65,7 @@ export default function Leaderboard() {
                     initial={{opacity:0, translateY:50}}
                     whileInView={{opacity:1,translateY:0}}
                     transition={{ duration: 1.5, easeInOut, delay: .3 }}
-                    className={'text-2xl text-center font-Inter leading-loose spacing tracking-[8px]'}>
+                    className={'md:text-2xl text-lg text-center font-Inter leading-loose spacing md:tracking-[8px] tracking-[5px]'}>
                     {"Cerebromesh TTS Subnet is a groundbreaking project that leverages the power of decentralized collaboration to advance the state-of-the-art in open-source Text-to-Speech (TTS) technology. By harnessing the Bittensor blockchain and a unique incentive mechanism, we aim to create the most advanced and accessible TTS models. By leveraging Cerebromesh's user base of over one million individuals, we are devoted to pushing cutting-edge technology to every end-user. The Cerebromesh leaderboard shows miners' daily performance in building the dataset."}
                 </motion.p>
             </div>
@@ -108,6 +108,8 @@ export default function Leaderboard() {
                                         position:'bottom',
                                     },
                                 },
+                                responsive:true,
+                                maintainAspectRatio:false
                             }
                             }
                             data={

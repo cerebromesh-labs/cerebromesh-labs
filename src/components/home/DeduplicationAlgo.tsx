@@ -18,6 +18,7 @@ export default function DeduplicationAlgo() {
                   "<ol><li>Improved Performance: Prevents overfitting, enhancing model generalization.</li>\n" +
                   "<li>Efficiency: Reduces dataset size and computational resources.</li>\n" +
                   "<li>Quality: Maintains diverse, high-quality training data.</li></ol>"}/>
+
                 <motion.div
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
@@ -27,6 +28,7 @@ export default function DeduplicationAlgo() {
                 <Bar data={{
                     labels: ['Jan', 'Feb', 'Mar', "Apr", "May", "Jun"],
                     datasets: duplicationAlgoData
+
                 }} options={{
                     scales: {
                         y: {
@@ -61,6 +63,7 @@ export default function DeduplicationAlgo() {
 
                 }}/>
                 </motion.div>
+
             </div>
         </div>
     )

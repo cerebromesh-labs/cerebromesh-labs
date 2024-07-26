@@ -227,6 +227,7 @@ export const leaderboardData = [
 
 ]
 
+
 export const FineWebRecipData = [
     {
         title:"URL Collection",
@@ -369,3 +370,4 @@ export const leaderboardBubbleData = [
         borderColor: '#F765A3',
     },
 ]
+

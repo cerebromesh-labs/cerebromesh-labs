@@ -8,9 +8,11 @@ import {registerables,Chart} from 'chart.js';
 Chart.register(...registerables);
 
 import { FaAngleDoubleLeft,FaAngleLeft, FaAngleRight, FaAngleDoubleRight } from "react-icons/fa";
+
 import {leaderboardBubbleData, leaderboardData as data} from '@/lib/constants'
 
 import {motion,easeInOut} from "framer-motion";
+
 
 export default function Leaderboard() {
     const dataPerPage = 8
@@ -126,6 +128,7 @@ export default function Leaderboard() {
                 whileInView={{opacity:1,translateY:0}}
                 transition={{ duration: 1.5, easeInOut, delay: .3 }}
                 className={'my-20'}>
+
                 <div className={'flex flex-row '}>
                     <button
                     onClick={() => handleActiveType('leaderboard')}
@@ -158,6 +161,7 @@ export default function Leaderboard() {
                         <tbody>
                         {currentData.map((item, index) => (
                             <tr className={'border-y border-gray-700 py-3'} key={index}>
+
                                 <td className={'text-left text-gray-200 font-normal py-3'}>
                                     <p className={'ml-6'}>{item.rank}</p>
                                 </td>
@@ -181,6 +185,7 @@ export default function Leaderboard() {
                     </div>
                 </div>
             </motion.div>
+
         </div>
     )
 }

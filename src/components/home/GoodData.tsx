@@ -1,8 +1,11 @@
+
 'use client'
+
 import React from 'react'
 import DotImage from '@/assets/cerebromesh_inside_dot.png'
 import Image from "next/image";
 import SectionHeader from "@/components/home/SectionHeader";
+
 import { easeInOut, motion } from 'framer-motion';
 
 const fadeIn = {
@@ -16,6 +19,7 @@ const fadeInParagraph = {
     animate: { opacity: 1 },
     transition: { duration: 2, easeInOut, delay: 0.5 }
 };
+
 export default function GoodDataComp(){
     return (
         <div className={'container mx-auto py-8 '}>

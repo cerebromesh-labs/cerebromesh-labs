@@ -2,7 +2,9 @@
 import React from 'react'
 import Image from "next/image";
 import DotImage from '@/assets/cerebromesh_inside_dot.png'
+
 import {easeInOut,motion} from "framer-motion";
+
 
 export default function EvaluationMethodology(){
     return(

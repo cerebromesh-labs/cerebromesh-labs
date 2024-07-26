@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
+
 import {motion, easeInOut} from "framer-motion";
 
 
@@ -77,6 +78,7 @@ export default function Datasets() {
                     whileInView={{opacity:1,translateY:0}}
                     transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'mt-10'}>
+
                     <Swiper
                         ref={sliderRef}
                         modules={[Autoplay, Navigation]}

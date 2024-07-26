@@ -9,9 +9,11 @@ import EvaluationMethodology from "@/components/home/EvaluationMethodology";
 import Datasets from "@/components/home/Datasets";
 import Leaderboard from "@/components/home/Leaderboard";
 import Footer from "@/components/Footer";
+
 import FinewebRecipe from "@/components/home/FinewebRecipe";
 import StarBackground from '../../public/star-background.png'
 import Image from "next/image";
+
 
 export default function Home() {
   return (

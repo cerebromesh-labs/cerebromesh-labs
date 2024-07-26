@@ -10,7 +10,7 @@ Chart.register(...registerables);
 
 export default function DeduplicationAlgo() {
     return (
-        <div className={'container mx-auto my-14'}>
+        <div className={'container mx-auto py-8'}>
             <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
               <SectionHeader title={"Deduplication Algorithm"} description={"Deduplication ensures dataset uniqueness by:\n" +
                   "<li>Identifying and removing duplicate entries.</li>\n" +
@@ -58,7 +58,9 @@ export default function DeduplicationAlgo() {
                                 color:"#FFF",
                             }
                         },
-                    }
+
+                    },
+
                 }}/>
                 </motion.div>
 

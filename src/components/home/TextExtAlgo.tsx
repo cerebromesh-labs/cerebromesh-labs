@@ -10,7 +10,7 @@ import {motion,easeInOut} from "framer-motion";
 
 export default function TextExtAlgo(){
     return (
-        <div className={'container mx-auto my-14'}>
+        <div className={'container mx-auto py-8'}>
             <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
                 <SectionHeader title={'Text Extraction Algorithm'} description={'Text extraction from web crawl data can use either raw HTML with metadata or text-only versions of websites. Specialized open-source libraries significantly improve text quality by removing boilerplate content from raw data, producing a smaller but better dataset for model training. While resource-intensive, this method is preferable for high-quality results. However, budget constraints might make using default text-only data a practical, if lower quality, alternative.'}/>
 
@@ -46,7 +46,7 @@ export default function TextExtAlgo(){
                             x: {
                                 grid: {
                                     display: true,
-                                    color:"#3E3E40"
+                                    color:"#3E3E40",
                                 },
                                 ticks: {
 
@@ -54,7 +54,8 @@ export default function TextExtAlgo(){
                                     font: {
                                         size: 12,
                                         weight: 'normal'
-                                    }
+                                    },
+
                                 },
                                 title: {
                                     display:true,

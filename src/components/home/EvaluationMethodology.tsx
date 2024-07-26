@@ -8,7 +8,7 @@ import {easeInOut,motion} from "framer-motion";
 
 export default function EvaluationMethodology(){
     return(
-        <div className={'container mx-auto my-14'}>
+        <div className={'container mx-auto py-8'}>
             <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10 flex flex-col justify-center items-center'}>
                 <motion.p
                     initial={{opacity:0}}

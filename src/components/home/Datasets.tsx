@@ -123,7 +123,7 @@ function SlideComponent(){
                     <span>Read More</span>
                     <span><FaArrowRight/></span>
                 </div>
-                <div className={'absolute bottom-6 right-6 hidden group-hover:block transition-all duration-300'}><Image
+                <div className={'absolute bottom-6 right-6'}><Image
                     src={StarImg} alt={' '}/></div>
             </div>
         </div>

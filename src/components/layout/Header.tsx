@@ -52,7 +52,7 @@ const Header = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full h-20 flex justify-center items-center bg-main-bg z-50 lg:bg-main-bg lg:backdrop-blur-sm shadow-black/30 shadow-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/100 backdrop-blur-sm'}`}>
+    <div className={`fixed top-0 left-0 w-[100vw] h-20 flex justify-center items-center bg-main-bg z-50 lg:bg-main-bg lg:backdrop-blur-sm shadow-black/30 shadow-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/100 backdrop-blur-sm'}`}>
       <div className="flex container mx-auto px-2 py-2 items-center justify-between">
         {/* Logo */}
         <a className="block w-[12rem] xl:mr-8" href="#hero">

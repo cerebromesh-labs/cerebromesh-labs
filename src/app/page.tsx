@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <GetStarted/>
       <div className={'relative'}>
-          <div className={'absolute top-0 left-0 right-0 bottom-0 w-[100vw] -z-10 star-image opacity-60'}/>
+          <div className={'absolute top-0 left-0 right-0 bottom-0 w-full -z-10 star-image opacity-60 '}/>
           <GoodDataComp/>
           <FinewebRecipe/>
           <TextExtAlgo/>

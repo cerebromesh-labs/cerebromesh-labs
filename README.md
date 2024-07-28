@@ -117,7 +117,9 @@ For in-depth information about the project architecture, component usage, and de
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+CerebroMesh Labs is proprietary software. Use of this software is governed by the CerebroMesh Labs Proprietary License. For full license terms, please refer to the [LICENSE](LICENSE) file in this repository.
+
+**Important**: This software is not open source. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
 
 ## Contact
 

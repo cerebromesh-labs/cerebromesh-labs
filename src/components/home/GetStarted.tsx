@@ -11,7 +11,7 @@ import { FaChevronRight } from "react-icons/fa";
 export default function GetStarted() {
     return (
         <div className={'w-full h-[100vh] relative'}>
-            <Image className={'absolute w-full h-full -z-20'} src={StarFieldGif} alt={'Star Field Gif'}/>
+            <Image className={'absolute w-full h-full -z-20'} src={StarFieldGif} alt={'Star Field Gif'} unoptimized/>
             <div className={'z-20 text-white flex flex-col justify-center items-center w-full h-full gap-6 px-4'}>
                 <h1 className={'lg:text-8xl md:text-7xl text-5xl font-medium text-center'}>Refined <span className={'text-primary'}>AI</span> Datasets</h1>
                 <p className={'lg:text-2xl md:text-xl text-lg  max-w-screen-md text-center '}>Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. We use the algorithm of <a href={'#'} className={'text-primary italic'}>huggingface.co</a></p>

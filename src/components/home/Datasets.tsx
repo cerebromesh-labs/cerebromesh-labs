@@ -18,6 +18,8 @@ import 'swiper/css/scrollbar';
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 import {motion, easeInOut} from "framer-motion";
+import {datasets} from '@/lib/constants'
+
 
 
 export default function Datasets() {
@@ -87,9 +89,9 @@ export default function Datasets() {
                         pagination={{clickable: true}}
                         autoplay={{delay: 5000}}
                     >
-                        {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                        {datasets.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <SlideComponent/>
+                                <SlideComponent title={item.title} desc={item.desc} url={item.url}/>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -108,21 +110,20 @@ export default function Datasets() {
 }
 
 
-function SlideComponent(){
+function SlideComponent({title,desc,url}:{title:string,desc:string,url:string}){
     return (
         <div
             className={'w-80 space-y-7 bg-secondary-bg hover:bg-[#474D62] transition-all duration-300 rounded-lg overflow-hidden mx-auto group cursor-pointer'}>
             <Image src={DatasetImg1} alt={'dataset image 1'}/>
             <div className={'px-3 py-4 space-y-6 relative'}>
-                <h5 className={'text-xl font-bold'}>AI Training Datasets</h5>
-                <p>Explore our comprehensive collection
-                    of datasets tailored for machine
-                    learning models.</p>
-                <div
+                <h5 className={'text-xl font-bold'}>{title}</h5>
+                <p>{desc}</p>
+                <a
+                    href={url}
                     className={'text-primary uppercase font-bold text-xs flex flex-row gap-2 items-center cursor-pointer'}>
                     <span>Read More</span>
                     <span><FaArrowRight/></span>
-                </div>
+                </a>
                 <div className={'absolute bottom-6 right-6'}><Image
                     src={StarImg} alt={' '}/></div>
             </div>

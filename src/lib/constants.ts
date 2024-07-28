@@ -371,3 +371,36 @@ export const leaderboardBubbleData = [
     },
 ]
 
+export const datasets = [
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    },
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    },
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    },
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    },
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    },
+    {
+        title: 'AI Training Datasets',
+        desc: 'Explore our comprehensive collection of datasets tailored for machine learning models.',
+        url: '#'
+    }
+]
+

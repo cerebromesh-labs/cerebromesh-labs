@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { sora, sourceCodePro, inter } from "@/styles/fonts";
 import "@/styles/globals.css";
 
+// Metadata for the application
 export const metadata: Metadata = {
   metadataBase: new URL("https://cerebromeshlabs.vercel.app"),
   title: "CerebroMesh Labs",
@@ -34,20 +35,27 @@ export const metadata: Metadata = {
   },
 };
 
+// Viewport configuration
 export const viewport: Viewport = {
   themeColor: '#AC6AFF', // Theme color for the website
 }
 
+// Root layout component
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} 
-                        ${sourceCodePro.variable}
-                        ${inter.variable} min-h-[100vh] h-full bg-main-bg text-white`}>
+      <body className={`
+        ${sora.variable} 
+        ${sourceCodePro.variable}
+        ${inter.variable} 
+        min-h-screen 
+        bg-main-bg 
+        text-white
+      `}>
         {children}
       </body>
     </html>

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 // Viewport configuration
 export const viewport: Viewport = {
-  themeColor: '#AC6AFF', // Theme color for the website
+  themeColor: '#8ca4fb', // Theme color for the website
 }
 
 // Root layout component

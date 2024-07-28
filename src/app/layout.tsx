@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 // Metadata for the application
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cerebromeshlabs.vercel.app"),
+  metadataBase: new URL("https://cerebromesh-labs.vercel.app"),
   title: "CerebroMesh Labs",
   description: "Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. Unlock your AI's potential with our expert data.",
   openGraph: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     description: "Cerebromesh Labs provides high-quality, curated datasets to enhance your AI training. Unlock your AI's potential with our expert data.",
     type: "website",
     locale: "en_US",
-    url: new URL("/", "https://cerebromeshlabs.vercel.app"),
+    url: new URL("/", "https://cerebromesh-labs.vercel.app"),
     images: [
       {
-        url: "https://cerebromeshlabs.vercel.app/og-image.png",
+        url: "https://cerebromesh-labs.vercel.app/og-image.gif",
         width: 1784,
         height: 892,
         alt: "CerebroMesh Labs Open Graph Image"
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [
       {
-        url: "https://cerebromeshlabs.vercel.app/og-image.png",
+        url: "https://cerebromesh-labs.vercel.app/og-image.gif",
         alt: "CerebroMesh Labs Twitter Card Image"
       }
     ]

@@ -4,7 +4,7 @@ import React, { useCallback, useRef } from 'react'
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from "swiper/modules";
-import { motion } from "framer-motion";
+import {easeInOut, motion} from "framer-motion";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 import DatasetImg1 from '@/assets/data-set-img-1.png'
@@ -16,6 +16,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import {useInView} from "react-intersection-observer";
 
 // Types
 type SlideComponentProps = {
@@ -49,6 +50,27 @@ const SlideComponent: React.FC<SlideComponentProps> = ({ title, desc, url }) => 
  */
 const Datasets: React.FC = () => {
   const sliderRef = useRef(null);
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const [subRef, subInView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: inView ? 1 : 0 },
+    transition: { duration: 2, easeInOut  },
+  };
+
+  const subFadeIn = {
+    initial: { opacity: 0, y: 50},
+    animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 50},
+    transition: { duration: 2, easeInOut  },
+  };
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -72,21 +94,24 @@ const Datasets: React.FC = () => {
   }
 
   return (
-    <div className='bg-dark-blue-bg'>
+    <motion.div ref={ref} {...fadeIn} className='bg-dark-blue-bg'>
       <div className='px-5 py-14'>
         <motion.h1
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
+            {...fadeIn}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
+          // transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
           className='lg:text-5xl md:text-4xl text-3xl font-bold text-center leading-relaxed'
         >
           We Provide AI<br />
           Training Datasets.
         </motion.h1>
         <motion.div
-          initial={{ opacity: 0, translateY: 50 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
+            ref={subRef}
+            {...subFadeIn}
+          // initial={{ opacity: 0, translateY: 50 }}
+          // whileInView={{ opacity: 1, translateY: 0 }}
+          // transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
           className='mt-10'
         >
           <Swiper
@@ -113,7 +138,7 @@ const Datasets: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

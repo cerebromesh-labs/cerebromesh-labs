@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import {motion,easeInOut} from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 import DotImage from "@/assets/cerebromesh_inside_dot.png";
 
 type SectionHeaderProps = {
@@ -10,17 +11,41 @@ type SectionHeaderProps = {
 
 /**
  * SectionHeader component
- * 
+ *
  * This component renders a consistent header for different sections,
  * including a title, description, and decorative elements.
  */
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => {
-  return (
+    const [ref, inView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+    const [subRef, subInView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+    const fadeIn = {
+        initial: { opacity: 0 },
+        animate: { opacity: inView ? 1 : 0 },
+        transition: { duration: 2, easeInOut  },
+    };
+
+    const subFadeIn = {
+        initial: { opacity: 0, y: 20},
+        animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 20},
+        transition: { duration: 2, easeInOut  },
+    };
+
+    return (
     <div className="lg:space-y-5 space-y-12">
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+          ref={ref}
+          {...fadeIn}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
         className="flex flex-row gap-1 items-center justify-center lg:justify-start lg:relative"
       >
         <div className="lg:block hidden">
@@ -33,9 +58,11 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
         </div>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+          ref={subRef}
+          {...subFadeIn}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
         className="lg:text-2xl md:text-xl text-md lg:text-left text-center !leading-relaxed"
         dangerouslySetInnerHTML={{ __html: description }}
       />

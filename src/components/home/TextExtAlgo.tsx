@@ -7,24 +7,62 @@ Chart.register(...registerables);
 
 
 import {motion,easeInOut} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 
 export default function TextExtAlgo(){
+    const [ref, inView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+    const [subRef, subInView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+    const [graphRef, graphInView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+    const fadeIn = {
+        initial: { opacity: 0, y:50 },
+        animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
+        transition: { duration: 2, ease: "easeInOut" }
+    };
+
+    const subFadeIn = {
+        initial: { opacity: 0, y:50 },
+        animate: { opacity: subInView ? 1:0, y: subInView ? 0:50 },
+        transition: { duration: 2, ease: "easeInOut" }
+    };
+
+    const graphFadeIn = {
+        initial: { opacity: 0, y:50 },
+        animate: { opacity: graphInView ? 1:0, y: graphInView ? 0:50 },
+        transition: { duration: 2, ease: "easeInOut" }
+    };
+
     return (
         <div className={'container mx-auto py-8'}>
-            <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
+            <motion.div ref={ref} {...fadeIn} className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
                 <SectionHeader title={'Text Extraction Algorithm'} description={'Text extraction from web crawl data can use either raw HTML with metadata or text-only versions of websites. Specialized open-source libraries significantly improve text quality by removing boilerplate content from raw data, producing a smaller but better dataset for model training. While resource-intensive, this method is preferable for high-quality results. However, budget constraints might make using default text-only data a practical, if lower quality, alternative.'}/>
 
                 <motion.div
-                    initial={{opacity:0}}
-                    whileInView={{opacity:1}}
-                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                    ref={subRef}
+                    {...subFadeIn}
+                    // initial={{opacity:0}}
+                    // whileInView={{opacity:1}}
+                    // transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'md:text-lg text-md my-10 text-center w-full'}>
                     Attempting to further globally dedup worsened perf
                 </motion.div>
                 <motion.div
-                initial={{opacity:0}}
-                whileInView={{opacity:1}}
-                transition={{ duration: 1.5, easeInOut, delay: .3 }}
+                    ref={graphRef}
+                    {...graphFadeIn}
+                // initial={{opacity:0}}
+                // whileInView={{opacity:1}}
+                // transition={{ duration: 1.5, easeInOut, delay: .3 }}
                 className={'mx-auto w-full'}
                 >
 
@@ -168,7 +206,7 @@ export default function TextExtAlgo(){
 
                 </motion.div>
 
-            </div>
+            </motion.div>
         </div>
     )
 }

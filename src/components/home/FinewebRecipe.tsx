@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 import SectionHeader from "@/components/home/SectionHeader";
 import { FineWebRecipData } from "@/lib/constants";
+import {useInView} from "react-intersection-observer";
 
 type RecipeItemProps = {
   item: {
@@ -19,14 +20,25 @@ type RecipeItemProps = {
 
 /**
  * RecipeItem component
- * 
+ *
  * Renders an individual item in the FineWeb recipe list.
  */
-const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) => (
+const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) =>{
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const fadeIn = {
+    initial: { opacity: 0, y:50 },
+    animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
+    transition: { duration: 2, ease: "easeInOut" }
+  };
+
+  return (
   <motion.div
-    initial={{ opacity: 0, translateY: 50 }}
-    whileInView={{ opacity: 1, y: 0, translateY: 0 }}
-    transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+      ref={ref}
+      {...fadeIn}
     className="grid md:grid-cols-2 grid-cols-1"
   >
     <div>
@@ -41,17 +53,28 @@ const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) => (
     </div>
     <div className={`w-[.5px] mb-6 h-10 bg-gray-400 mx-auto md:hidden ${isLast && "hidden"}`} />
   </motion.div>
-);
+);}
 
 /**
  * FinewebRecipe component
- * 
+ *
  * Displays the steps involved in the FineWeb data preparation algorithm.
  */
 const FinewebRecipe: React.FC = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: inView ? 1:0 },
+    transition: { duration: 0.5, ease: "easeInOut" }
+  };
+
   return (
     <div className="container mx-auto py-8">
-      <div className="bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10">
+      <motion.div ref={ref} {...fadeIn} className="bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10">
         <SectionHeader
           title="The FineWeb Recipe"
           description="The data preparation algorithm involves several key steps to ensure the creation of a high-quality dataset:"
@@ -67,7 +90,7 @@ const FinewebRecipe: React.FC = () => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

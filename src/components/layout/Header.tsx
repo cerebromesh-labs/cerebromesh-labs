@@ -52,7 +52,7 @@ const Header = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full h-20 flex justify-center items-center  z-50 bg-[linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #1B1B1B 55%, rgba(255, 255, 255, 0.00) 100%)] lg:bg-opacity-10 lg:backdrop-blur-sm shadow-black/30 shadow-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/100 backdrop-blur-sm'}`}>
+    <div className={`fixed top-0 left-0 w-full h-20 flex justify-center items-center  z-50 bg-[linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #1B1B1B 55%, rgba(255, 255, 255, 0.00) 100%)] lg:bg-opacity-10 lg:backdrop-blur-2xl shadow-black/30 shadow-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/100 backdrop-blur-sm'}`}>
       <div className="flex container mx-auto px-2 py-2 items-center justify-between">
         {/* Logo */}
         <a className="block w-[12rem] xl:mr-8" href="#hero">

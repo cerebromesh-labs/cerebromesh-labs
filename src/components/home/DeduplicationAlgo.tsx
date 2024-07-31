@@ -7,13 +7,14 @@ import { motion } from "framer-motion";
 
 import SectionHeader from "@/components/home/SectionHeader";
 import { duplicationAlgoData } from "@/lib/constants";
+import {useInView} from "react-intersection-observer";
 
 // Register Chart.js components
 ChartJS.register(...registerables);
 
 /**
  * DeduplicationAlgo component
- * 
+ *
  * This component displays information about the deduplication algorithm
  * and shows a bar chart visualization of the algorithm's performance.
  */
@@ -54,26 +55,50 @@ const DeduplicationAlgo: React.FC = () => {
     datasets: duplicationAlgoData
   };
 
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const [subRef, subInView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+
+  const fadeIn = {
+    initial: { opacity: 0, y:50 },
+    animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
+    transition: { duration: 2, ease: "easeInOut" }
+  };
+
+  const subFadeIn = {
+    initial: { opacity: 0, y:50 },
+    animate: { opacity: subInView ? 1:0, y: subInView ? 0:50 },
+    transition: { duration: 2, ease: "easeInOut" }
+  };
+
+
+
   return (
     <div className='container mx-auto py-8'>
-      <div className='bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'>
-        <SectionHeader 
-          title="Deduplication Algorithm" 
+      <motion.div ref={ref} {...fadeIn} className='bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'>
+        <SectionHeader
+          title="Deduplication Algorithm"
           description={description}
         />
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+            ref={subRef}
+            {...subFadeIn}
           className='mx-auto w-full'
         >
-          <Bar 
-            data={chartData} 
-            options={chartOptions} 
+          <Bar
+            data={chartData}
+            options={chartOptions}
           />
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   )
 }

@@ -17,15 +17,15 @@ const GetStarted: React.FC = () => {
     const words = [
         {
             text: 'Refined ',
-            className: 'text-white dark:text-white'
+            className: 'text-white dark:text-white lg:text-8xl md:text-7xl text-5xl font-medium '
         },
         {
             text: 'AI ',
-            className: 'text-primary dark:text-primary'
+            className: 'text-primary dark:text-primary lg:text-8xl md:text-7xl text-5xl font-medium '
         },
         {
             text: 'Datasets',
-            className: 'text-white dark:text-white'
+            className: 'text-white dark:text-white lg:text-8xl md:text-7xl text-5xl font-medium '
         }
     ];
 

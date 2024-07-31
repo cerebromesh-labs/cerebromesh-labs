@@ -39,9 +39,6 @@ const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) =>{
   <motion.div
       ref={ref}
       {...fadeIn}
-    // initial={{ opacity: 0, translateY: 50 }}
-    // whileInView={{ opacity: 1, y: 0, translateY: 0 }}
-    // transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
     className="grid md:grid-cols-2 grid-cols-1"
   >
     <div>

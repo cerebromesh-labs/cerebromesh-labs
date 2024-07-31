@@ -46,17 +46,11 @@ const EvaluationMethodology: React.FC = () => {
         <motion.p
             ref={subRef}
             {...subFadeIn}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
           className='lg:text-2xl md:text-xl text-md text-center !leading-relaxed'
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <motion.div
             {...subFadeIn}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
         >
           <Image src={DotImage} alt='Dot Image' width={70} height={70} />
         </motion.div>

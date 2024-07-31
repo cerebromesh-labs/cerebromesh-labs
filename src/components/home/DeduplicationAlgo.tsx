@@ -91,9 +91,6 @@ const DeduplicationAlgo: React.FC = () => {
         <motion.div
             ref={subRef}
             {...subFadeIn}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
           className='mx-auto w-full'
         >
           <Bar

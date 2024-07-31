@@ -51,18 +51,12 @@ export default function TextExtAlgo(){
                 <motion.div
                     ref={subRef}
                     {...subFadeIn}
-                    // initial={{opacity:0}}
-                    // whileInView={{opacity:1}}
-                    // transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'md:text-lg text-md my-10 text-center w-full'}>
                     Attempting to further globally dedup worsened perf
                 </motion.div>
                 <motion.div
                     ref={graphRef}
                     {...graphFadeIn}
-                // initial={{opacity:0}}
-                // whileInView={{opacity:1}}
-                // transition={{ duration: 1.5, easeInOut, delay: .3 }}
                 className={'mx-auto w-full'}
                 >
 

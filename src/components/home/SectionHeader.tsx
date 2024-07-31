@@ -43,9 +43,6 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
       <motion.div
           ref={ref}
           {...fadeIn}
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
         className="flex flex-row gap-1 items-center justify-center lg:justify-start lg:relative"
       >
         <div className="lg:block hidden">
@@ -60,9 +57,6 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
       <motion.div
           ref={subRef}
           {...subFadeIn}
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
         className="lg:text-2xl md:text-xl text-md lg:text-left text-center !leading-relaxed"
         dangerouslySetInnerHTML={{ __html: description }}
       />

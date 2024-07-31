@@ -98,9 +98,6 @@ const Datasets: React.FC = () => {
       <div className='px-5 py-14'>
         <motion.h1
             {...fadeIn}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
           className='lg:text-5xl md:text-4xl text-3xl font-bold text-center leading-relaxed'
         >
           We Provide AI<br />
@@ -109,9 +106,6 @@ const Datasets: React.FC = () => {
         <motion.div
             ref={subRef}
             {...subFadeIn}
-          // initial={{ opacity: 0, translateY: 50 }}
-          // whileInView={{ opacity: 1, translateY: 0 }}
-          // transition={{ duration: 1.5, ease: "easeInOut", delay: .3 }}
           className='mt-10'
         >
           <Swiper

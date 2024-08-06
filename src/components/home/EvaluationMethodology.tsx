@@ -25,15 +25,15 @@ const EvaluationMethodology: React.FC = () => {
   });
 
   const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: inView ? 1 : 0 },
-    transition: { duration: 2, easeInOut  },
+    initial: { opacity: 0,y:50 },
+    animate: { opacity: inView ? 1 : 0, y: inView ? 0 : 50},
+    transition: { duration: 1.5, easeInOut  },
   };
 
   const subFadeIn = {
     initial: { opacity: 0, y: 20},
     animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 20},
-    transition: { duration: 2, easeInOut  },
+    transition: { duration: 1.5, easeInOut  },
   };
 
   const description = `In this work, our approach involved training small models and evaluating them on a set of "early-signal" benchmark tasks. This methodology served as a reasonable proxy for assessing the quality of the data utilized to train these models. However, it's crucial to acknowledge the potential caveat surrounding overfitting on the evaluation benchmarks.

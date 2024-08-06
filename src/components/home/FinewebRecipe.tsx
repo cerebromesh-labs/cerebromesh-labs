@@ -67,9 +67,9 @@ const FinewebRecipe: React.FC = () => {
   });
 
   const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: inView ? 1:0 },
-    transition: { duration: 0.5, ease: "easeInOut" }
+    initial: { opacity: 0, y:50 },
+    animate: { opacity: inView ? 1:0, y: inView ? 0:50},
+    transition: { duration: 1.5, ease: "easeInOut" }
   };
 
   return (

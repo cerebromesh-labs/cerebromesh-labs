@@ -55,18 +55,18 @@ export default function Leaderboard() {
                 <motion.h2
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
-                    transition={{ duration: 2, easeInOut, delay: .3 }}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'md:text-4xl text-2xl font-bold text-center'}>Cerebromesh TTS Subnet Leaderboard</motion.h2>
                 <motion.div
                     initial={{opacity:0, translateY:50}}
                     whileInView={{opacity:1,translateY:0}}
-                    transition={{ duration: 2, easeInOut, delay: .3 }}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'my-8'}
                 ><Image className={'w-96'} src={Logo} alt={'Logo'}/></motion.div>
                 <motion.p
                     initial={{opacity:0, translateY:50}}
                     whileInView={{opacity:1,translateY:0}}
-                    transition={{ duration: 2, easeInOut, delay: .3 }}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'md:text-2xl text-lg text-center font-Inter leading-loose spacing md:tracking-[8px] tracking-[5px]'}>
                     {"Cerebromesh TTS Subnet is a groundbreaking project that leverages the power of decentralized collaboration to advance the state-of-the-art in open-source Text-to-Speech (TTS) technology. By harnessing the Bittensor blockchain and a unique incentive mechanism, we aim to create the most advanced and accessible TTS models. By leveraging Cerebromesh's user base of over one million individuals, we are devoted to pushing cutting-edge technology to every end-user. The Cerebromesh leaderboard shows miners' daily performance in building the dataset."}
                 </motion.p>
@@ -76,7 +76,7 @@ export default function Leaderboard() {
                 <motion.div
                     initial={{opacity:0, translateX:-80}}
                     whileInView={{opacity:1,translateX:0}}
-                    transition={{ duration: 2, easeInOut, delay: .3 }}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'flex flex-col gap-14 bg-secondary-bg p-6 rounded-lg border border-gray-700 h-fit'}>
                     <div className={'flex flex-col gap-2'}>
                         <h4 className={'text-xl font-bold'}>NEXT REWARD UPDATE </h4>
@@ -96,7 +96,7 @@ export default function Leaderboard() {
                 <motion.div
                     initial={{opacity:0, translateX:80}}
                     whileInView={{opacity:1,translateX:0}}
-                    transition={{ duration: 2, easeInOut, delay: .3 }}
+                    transition={{ duration: 1.5, easeInOut, delay: .3 }}
                     className={'border border-gray-700 rounded-lg  bg-secondary-bg'}>
                     <div className={'border-b border-gray-700 p-4'}>
                         <h4 className={'font-bold text-lg'}>{"DAILY MINER'S PERFORMANCE"}</h4>
@@ -126,7 +126,7 @@ export default function Leaderboard() {
             <motion.div
                 initial={{opacity:0, translateY:80}}
                 whileInView={{opacity:1,translateY:0}}
-                transition={{ duration: 2, easeInOut, delay: .3 }}
+                transition={{ duration: 1.5, easeInOut, delay: .3 }}
                 className={'my-20'}>
 
                 <div className={'flex flex-row '}>

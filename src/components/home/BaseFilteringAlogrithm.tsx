@@ -21,7 +21,7 @@ const BaseFilteringAlgorithm: React.FC = () => {
     const fadeIn = {
         initial: { opacity: 0, y:50 },
         animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
-        transition: { duration: 2, ease: "easeInOut" }
+        transition: { duration: 1.5, ease: "easeInOut" }
     };
   const description = `Filtering refines datasets by removing harmful content and improving quality. Key steps include:
     <li>URL Filtering: Block unwanted content (e.g., adult material).</li>

@@ -69,13 +69,13 @@ const DeduplicationAlgo: React.FC = () => {
   const fadeIn = {
     initial: { opacity: 0, y:50 },
     animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
-    transition: { duration: 2, ease: "easeInOut" }
+    transition: { duration: 1.5, ease: "easeInOut" }
   };
 
   const subFadeIn = {
     initial: { opacity: 0, y:50 },
     animate: { opacity: subInView ? 1:0, y: subInView ? 0:50 },
-    transition: { duration: 2, ease: "easeInOut" }
+    transition: { duration: 1.5, ease: "easeInOut" }
   };
 
 

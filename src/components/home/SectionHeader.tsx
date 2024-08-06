@@ -29,13 +29,13 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
     const fadeIn = {
         initial: { opacity: 0 },
         animate: { opacity: inView ? 1 : 0 },
-        transition: { duration: 2, easeInOut  },
+        transition: { duration: 1.5, easeInOut  },
     };
 
     const subFadeIn = {
         initial: { opacity: 0, y: 20},
         animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 20},
-        transition: { duration: 2, easeInOut  },
+        transition: { duration: 1.5, easeInOut  },
     };
 
     return (

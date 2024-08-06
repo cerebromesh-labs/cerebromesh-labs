@@ -24,7 +24,7 @@ export default function Home() {
       <div className="relative">
         {/* Background image */}
         <div className="absolute inset-0 w-full -z-10 star-image opacity-60" />
-        
+
         {/* Main content sections */}
         <GoodDataComp />
         <FinewebRecipe />

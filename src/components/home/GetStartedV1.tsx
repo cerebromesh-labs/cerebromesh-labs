@@ -25,8 +25,8 @@ export default function GetStarted() {
                     autoplay={{delay: 5000}}
                 >
 
-                    {getStartedSlides?.map(({title,description,button,buttonHref})=>(
-                        <SwiperSlide>
+                    {getStartedSlides?.map(({title,description,button,buttonHref},_idx)=>(
+                        <SwiperSlide key={_idx}>
                             <GetStartedSingleComp
                                 title={title}
                                 description={description}

@@ -26,16 +26,28 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
         triggerOnce: false,
     });
 
+    const [titleRef, titleInView] = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
+
+
     const fadeIn = {
         initial: { opacity: 0 },
         animate: { opacity: inView ? 1 : 0 },
-        transition: { duration: 1.5, easeInOut  },
+        transition: { duration: 0.7, easeInOut  },
     };
 
     const subFadeIn = {
-        initial: { opacity: 0, y: 20},
-        animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 20},
-        transition: { duration: 1.5, easeInOut  },
+        initial: { opacity: 0},
+        animate: { opacity: subInView ? 1 : 0},
+        transition: { duration: .7, easeInOut  },
+    };
+
+    const titleFadeIn = {
+        initial: { opacity: 0},
+        animate: { opacity: titleInView ? 1 : 0},
+        transition: { duration: .7, easeInOut  },
     };
 
     return (
@@ -49,7 +61,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => 
           <Image src={DotImage} alt="Decorative Dot" width={25} height={25} />
         </div>
         <div className="lg:relative">
-          <h2 className="lg:text-3xl md:text-2xl text-xl text-center lg:text-left font-bold lg:after:content-[' ']  lg:after:bg-primary lg:after:opacity-35 lg:after:w-full lg:after:h-4 lg:after:absolute lg:after:left-0 lg:after:bottom-0">
+          <h2 ref={titleRef} {...titleFadeIn} className="lg:text-3xl md:text-2xl text-xl text-center lg:text-left font-bold lg:after:content-[' ']  lg:after:bg-primary lg:after:opacity-35 lg:after:w-full lg:after:h-4 lg:after:absolute lg:after:left-0 lg:after:bottom-0">
             {title}
           </h2>
         </div>

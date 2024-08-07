@@ -55,20 +55,9 @@ const Datasets: React.FC = () => {
     triggerOnce: false,
   });
 
-  const [subRef, subInView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
   const fadeIn = {
     initial: { opacity: 0 },
     animate: { opacity: inView ? 1 : 0 },
-    transition: { duration: 1.5, easeInOut  },
-  };
-
-  const subFadeIn = {
-    initial: { opacity: 0, y: 50},
-    animate: { opacity: subInView ? 1 : 0,  y: subInView ? 0 : 50},
     transition: { duration: 1.5, easeInOut  },
   };
 
@@ -103,9 +92,7 @@ const Datasets: React.FC = () => {
           We Provide AI<br />
           Training Datasets.
         </motion.h1>
-        <motion.div
-            ref={subRef}
-            {...subFadeIn}
+        <div
           className='mt-10'
         >
           <Swiper
@@ -130,7 +117,7 @@ const Datasets: React.FC = () => {
               <FaChevronRight size={30} />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   )

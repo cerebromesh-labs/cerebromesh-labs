@@ -10,11 +10,6 @@ import {motion,easeInOut} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 
 export default function TextExtAlgo(){
-    const [ref, inView] = useInView({
-        threshold: 0.1,
-        triggerOnce: false,
-    });
-
     const [subRef, subInView] = useInView({
         threshold: 0.1,
         triggerOnce: false,
@@ -25,27 +20,21 @@ export default function TextExtAlgo(){
         triggerOnce: false,
     });
 
-    const fadeIn = {
-        initial: { opacity: 0, y:50 },
-        animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
-        transition: { duration: 1.5, ease: "easeInOut" }
-    };
-
     const subFadeIn = {
-        initial: { opacity: 0, y:50 },
-        animate: { opacity: subInView ? 1:0, y: subInView ? 0:50 },
-        transition: { duration: 1.5, ease: "easeInOut" }
+        initial: { opacity: 0,},
+        animate: { opacity: subInView ? 1:0, },
+        transition: { duration: .7, ease: "easeInOut" }
     };
 
     const graphFadeIn = {
-        initial: { opacity: 0, y:50 },
-        animate: { opacity: graphInView ? 1:0, y: graphInView ? 0:50 },
-        transition: { duration: 1.5, ease: "easeInOut" }
+        initial: { opacity: 0 },
+        animate: { opacity: graphInView ? 1:0, },
+        transition: { duration: .7, ease: "easeInOut" }
     };
 
     return (
         <div className={'container mx-auto py-8'}>
-            <motion.div ref={ref} {...fadeIn} className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
+            <div className={'bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'}>
                 <SectionHeader title={'Text Extraction Algorithm'} description={'Text extraction from web crawl data can use either raw HTML with metadata or text-only versions of websites. Specialized open-source libraries significantly improve text quality by removing boilerplate content from raw data, producing a smaller but better dataset for model training. While resource-intensive, this method is preferable for high-quality results. However, budget constraints might make using default text-only data a practical, if lower quality, alternative.'}/>
 
                 <motion.div
@@ -200,7 +189,7 @@ export default function TextExtAlgo(){
 
                 </motion.div>
 
-            </motion.div>
+            </div>
         </div>
     )
 }

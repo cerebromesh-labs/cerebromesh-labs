@@ -53,36 +53,24 @@ const DeduplicationAlgo: React.FC = () => {
   const chartData = {
     labels: ['Jan', 'Feb', 'Mar', "Apr", "May", "Jun"],
     datasets: duplicationAlgoData
-  };
-
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
+  }
 
   const [subRef, subInView] = useInView({
     threshold: 0.1,
     triggerOnce: false,
   });
 
-
-  const fadeIn = {
-    initial: { opacity: 0, y:50 },
-    animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
-    transition: { duration: 1.5, ease: "easeInOut" }
-  };
-
   const subFadeIn = {
-    initial: { opacity: 0, y:50 },
-    animate: { opacity: subInView ? 1:0, y: subInView ? 0:50 },
-    transition: { duration: 1.5, ease: "easeInOut" }
+    initial: { opacity: 0},
+    animate: { opacity: subInView ? 1:0},
+    transition: { duration: .7, ease: "easeInOut" }
   };
 
 
 
   return (
     <div className='container mx-auto py-8'>
-      <motion.div ref={ref} {...fadeIn} className='bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'>
+      <div className='bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10'>
         <SectionHeader
           title="Deduplication Algorithm"
           description={description}
@@ -91,14 +79,14 @@ const DeduplicationAlgo: React.FC = () => {
         <motion.div
             ref={subRef}
             {...subFadeIn}
-          className='mx-auto w-full'
+          className='mx-auto w-full ,mb-6'
         >
           <Bar
             data={chartData}
             options={chartOptions}
           />
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   )
 }

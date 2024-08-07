@@ -32,7 +32,7 @@ const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) =>{
   const fadeIn = {
     initial: { opacity: 0, y:50 },
     animate: { opacity: inView ? 1:0, y: inView ? 0:50 },
-    transition: { duration: 2, ease: "easeInOut" }
+    transition: { duration: .7, ease: "easeInOut" }
   };
 
   return (
@@ -61,20 +61,10 @@ const RecipeItem: React.FC<RecipeItemProps> = ({ item, index, isLast }) =>{
  * Displays the steps involved in the FineWeb data preparation algorithm.
  */
 const FinewebRecipe: React.FC = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
-  const fadeIn = {
-    initial: { opacity: 0, y:50 },
-    animate: { opacity: inView ? 1:0, y: inView ? 0:50},
-    transition: { duration: 1.5, ease: "easeInOut" }
-  };
 
   return (
     <div className="container mx-auto py-8">
-      <motion.div ref={ref} {...fadeIn} className="bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10">
+      <div className="bg-secondary-bg rounded-lg lg:p-6 py-16 px-4 space-y-10">
         <SectionHeader
           title="The FineWeb Recipe"
           description="The data preparation algorithm involves several key steps to ensure the creation of a high-quality dataset:"
@@ -90,7 +80,7 @@ const FinewebRecipe: React.FC = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
